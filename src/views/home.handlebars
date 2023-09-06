@@ -3,11 +3,13 @@
         {{#each products.payload}}
             <div class="col-md-4">
                 <div class="card border-0 mb-3">
-                    <a href="/products/{{this._id}}" class="text-decoration-none">
+                    
+                    <div class="card-body text-center">
+                        <a href="/products/{{this._id}}" class="text-decoration-none">
                         <img src="{{this.thumbnails}}" class="img-fluid" alt="{{this.title}}">
                     </a>
-                    <div class="card-body text-center">
-                        <p >{{this.title}}<br><span class="text-danger">${{this.price}}</span></p>
+                        <div>{{this.title}}</div>
+                        <p>${{this.price}}</p>
                         <p><button class="btn btn-danger" onclick="agregarProductoAlCarrito('{{product._id}}')">Agregar </button></p>
                     </div>
                 </div>
